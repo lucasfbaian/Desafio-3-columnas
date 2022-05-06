@@ -1,0 +1,172 @@
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+
+.attribution2{
+    display: none;
+}
+.attribution1{
+    display: block;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: aqua;
+}
+
+.container{
+    height:100vh;
+    position: relative;
+}
+
+
+.main-container{
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags-container{
+    flex-wrap: wrap;
+    width: 1200px;
+    display: flex;
+    height: 450px;
+    justify-content: center;
+}
+
+.tags{
+    background-color: #fff;
+    max-width: 280px;
+    height: 450px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+}
+
+.title{
+    font-size: 1.7rem;
+}
+
+.text-tags p{
+        line-height: 25px;
+}
+
+.button{
+    height:100%;
+    position: relative;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 0;
+    width: 110px;
+    height:40px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+
+
+.Button-sedans{
+   color: $Bright-orange;
+}
+
+.Button_luxury{
+    color: $Very-dark-cyan;
+}
+
+.Button_suvs{
+    color: $Dark-cyan;
+}
+
+
+.text-tags{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.sedans{
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.suvs{
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury{
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media ( max-width: 375px){
+    .tags{
+        height: 400px;
+    }
+}
+
+
+@media ( max-width: 899px){
+
+    .suvs{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .luxury{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 5px;
+
+    }
+}
+
+@media ( max-width: 617px){
+
+    .sedans{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 5px;
+    }
+
+    .suvs{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .luxury{
+        border-bottom-left-radius: 5px;
+
+    }
+}
+
+@media (max-width: 918px ){
+    .attribution1{
+        display: none;
+    }
+
+    .attribution2{
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+    }
+}
