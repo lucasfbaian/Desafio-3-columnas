@@ -5,9 +5,9 @@
 }
 
 body{
-    background-color: hsl(270, 20%, 96%);
+    background-color: hsl(0, 0%, 100%);
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Rubik', sans-serif;
 }
 
@@ -25,40 +25,40 @@ body{
 }
 
 .figura_right{
-    bottom: -100px;
-    right: -150px;
+    bottom: -150px;
+    right: -200px;
     border-top-left-radius: 240px;
     border-top-right-radius: 240px;
-    background-color: hsl(270, 50%, 94%);
+    background-color: hsl(270, 20%, 96%);
 }
+
 .contenedor-content{
-    justify-content: center;
     height: 100vh;
+    position: relative;
     display: flex;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor_main{
+    padding-top: 60px;
+    padding-left: 75px;
+    /* background-color: aquamarine; */
     height: 550px;
-    width: 780px;
-    background-color: red;
-    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: start;
-    padding-top: 50px;
 }
 
 .contenedor{
-    align-self: flex-end;
-    display: flex;
     background-color: hsl(270, 20%, 96%);
     width: 250px;
     height: 500px;
     border-radius: 30px;
     overflow: hidden;
     border: 12px solid #fff;    margin-left: -4%;
-    box-shadow: 20px 0px 50px 0px hsl(270, 20%, 86%);
+    box-shadow: 0px 0px 20px -5px hsl(264, 100%, 81%);
 }
 
 .contenedor-movile-header{
@@ -173,9 +173,9 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
+    font-size: 10px;
     margin: 5px  20px;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 15px;
 }
 
 .contenedor-mensajero_chat{
@@ -208,19 +208,17 @@ span{
     width: 70px;
 }
 
-.chat span{
-    color: #fff;
-    font-size: 15px;
-    padding-right: 5px;
-    font-weight: 600;
-}
-
-.chat-left_four{
-    background:  linear-gradient(90deg, hsl(293, 100%, 63%),hsl(264, 100%, 61%));;
-}
-
+.chat-left_four,
 .chat-left_five{
     background:  linear-gradient(90deg, hsl(293, 100%, 63%),hsl(264, 100%, 61%));;
+    color: #fff;
+}
+
+.chat span{
+    color: #fff;
+    font-size: 12px;
+    padding-right: 5px;
+    font-weight: 600;
 }
 
 .contenedor_footer{
@@ -230,8 +228,9 @@ span{
     align-items: center;
 }
 .contenedor-dos{
-    /* background-color: #fff; */
-    max-width: 450px;
+    width: 450px;
+    margin-left: 100px;
+    /* text-align: center; */
 }
 
 .title{
@@ -250,4 +249,21 @@ span{
     width: 650px;
     text-align: center;
     padding-top: 50px;
+}
+
+@media (max-width: 815px){
+    .figura_left{
+        top: -50px;
+        left: -300px;
+    }
+
+    .figura_right{
+        bottom: -400px;
+        right: -400px;
+    }
+    
+    .contenedor-dos{
+        margin-left: 0px;
+        text-align: center;
+    }
 }

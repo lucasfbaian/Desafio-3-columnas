@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: grid;
+    padding: 20px;
+    /* con grid template colums le decimos las columnas que queremos tener */
+    grid-template-columns: 1fr 1fr auto 1fr;
+    /* con columns-row le damos las medidas a las filas */
+    grid-template-rows: 50px 100px;
+    /* para darle margenes entre las columnas y filas podemos usar gap con column o row */
+    row-gap: 10px;
+    column-gap: 10px;
+    /* con la propiedad gap prodemos acortar estos dos */
+    gap: 100px 50px;
+    background-color: cadetblue;
+}
+
+.contenedor div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    border: 1px solid;
+}
