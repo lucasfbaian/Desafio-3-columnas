@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylos2.css">
+    <style>
+        .grid-contenedor{
+            border: 5px solid #00a;
+            display: grid;
+            grid-gap: 5px;
+            /* grid-template-areas es una abrebiacion de grid-template-columns ya que con esta le damos nombre a la finas y columnas*/
+            grid-template-areas: 
+            'header header header header header'
+            'menu main main aside aside'
+            'menu footer footer footer footer'
+            ;
+            /* el siguiente codigo creo 3 columnas y 3 filas */
+        }
+
+        .grid-contenedor div{
+            border: 2px solid;
+            background-color: coral;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .grid-contenedor div:nth-child(1){
+                /* para definirlas en los elementos devemos utilizar la propiedad  grid-area con el nombre del area que querramos que tenga */
+            grid-area: header;
+            /* con esto le decimos que ocupa las tres primeras columnas de la primera fila ya que todas tienen el nombre de header */
+        }
+        .grid-contenedor div:nth-child(2){
+            grid-area: menu;
+        }
+        .grid-contenedor div:nth-child(3){
+            grid-area: main;
+        }
+        .grid-contenedor div:nth-child(4){
+            grid-area: aside;
+        }
+        .grid-contenedor div:nth-child(5){
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-contenedor">
+        <div class="caja1">Header</div>
+        <div class="caja2">nav</div>
+        <div class="caja3">main</div>
+        <div class="caja4">aside</div>
+        <div class="caja5">footer</div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div id="monalisa"></div>
+</body>
+</html>

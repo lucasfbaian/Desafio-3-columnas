@@ -3,25 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="/CON FLEX/PROYECTOS/fylo-data-storage-component-master/src/style.css">
 </head>
 <body>
+  <div class="contenedor-bg">
+    <div class="bg-desktop">
+      <img src="/CON FLEX/PROYECTOS/fylo-data-storage-component-master/images/bg-desktop.png" alt="bg-desktop" class="desktop">
+    </div>
+    <div class="bg-mobile">
+      <img src="/CON FLEX/PROYECTOS/fylo-data-storage-component-master/images/bg-mobile.png" alt="bg-mobile" class="mobile">
+    </div>
+    <div class="contenedor-main">
+      <div class="contenedor-left">
+        <div class="contenedor-logo">
+          <img src="/CON FLEX/PROYECTOS/fylo-data-storage-component-master/images/logo.svg" alt="logo" class="logo">
+        </div>
+        <div class="contenedor-logos">
+          <div class="logo-uno">
+            <img src="/CON FLEX/PROYECTOS/fylo-data-storage-component-master/images/icon-document.svg" alt="document" class="logos document">
+          </div>
+          <div class="logo-dos">
+            <img src="/CON FLEX/PROYECTOS/fylo-data-storage-component-master/images/icon-folder.svg" alt="folder" class="logos folder">
+          </div>
+          <div class="logo-tres">
+            <img src="/CON FLEX/PROYECTOS/fylo-data-storage-component-master/images/icon-upload.svg" alt="upload" class="logos upload">
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-right">
+        <div class="contenedor-centrado">
+          <p class="parrafo-derecho">
+            You've used <span>815GB</span> of your storage
+          </p>
+          <div class="contenedor-contador">
+            <div class="primera-barra">
+              <div class="segunda-barra">
+                <div class="circulo-blanco"></div>
+              </div>
+            </div>
+            <div class="porcentajes">
+              <span>0 GB</span>
+              <span>1000 GB</span>
+            </div>
+          </div>
+          <div class="pentaña">
+            <div class="biñeta">
+              <p class="text-pestaña">
+                185 
+              </p>
+              <span>GB LEFT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

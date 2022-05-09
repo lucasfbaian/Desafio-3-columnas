@@ -1,0 +1,366 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-top: 10px;
+    background-color: crimson;
+}
+
+.contenedor-uno{
+    display: grid;
+    padding: 20px;
+    /* con grid template colums le decimos las columnas que queremos tener */
+    grid-template-columns: 1fr 1fr auto 1fr;
+    /* con columns-row le damos las medidas a las filas */
+    grid-template-rows: 50px 100px;
+    /* para darle margenes entre las columnas y filas podemos usar gap con column o row */
+    row-gap: 10px;
+    column-gap: 10px;
+    /* con la propiedad gap prodemos acortar estos dos */
+    gap: 100px 50px;
+    background-color: cadetblue;
+}
+
+.contenedor-uno div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    border: 1px solid;
+}
+
+.contenedor-dos{
+    height: 450px;
+    /* a igual que flex la propiedad justify-content funciona con grid de igual manera */
+    justify-content: center;
+    /* tambien podemos utilizar align-content como en la flex */
+    align-content: center;
+    display: grid;
+    padding: 20px;
+    background-color: rgba(28, 181, 28, 0.949);
+    grid-template-columns:  repeat(4, 100px);
+    grid-template-rows: 100px 100px;
+    gap: 20px;
+}
+
+.contenedor-dos div{
+    background-color: rgb(4, 129, 4);
+    border: 1px solid;
+}
+
+
+.contenedor-tres{
+    display: grid;
+    /* podemos modificar las medidas de las cajar para darle forma a nuestra web y personalizarla */
+    grid-template-columns: 1fr  120px 1fr;
+    grid-template-rows: 1fr 100px 1fr;
+    background-color: #da5;
+    height: 90vh;
+}
+
+
+.contenedor-tres div{
+    font-size: 1.2em;
+    border: 1px solid;
+    padding: 40px;
+    background-color: rgb(212, 137, 7);
+}
+
+.contenedor-tres div:first-child{
+    /* al igual que flex podremos utilizar los alineadiones hacia un mismo contenedor */
+    justify-self: start;
+    align-self: start;
+}
+
+.contenedor-tres div:nth-child(7){
+    align-self: end;
+    justify-self: start;
+}
+.contenedor-tres div:nth-child(3){
+    align-self: start;
+    justify-self: end;
+}
+.contenedor-tres div:nth-child(9){
+    align-self: end;
+    justify-self: end;
+}
+.contenedor-tres div:nth-child(2){
+    align-self: end;
+    justify-self: center;
+}
+.contenedor-tres div:nth-child(4){
+    align-self: center;
+    justify-self: end;
+}
+.contenedor-tres div:nth-child(5){
+    align-self: center;
+    justify-self: center;
+}
+.contenedor-tres div:nth-child(6){
+    align-self: center;
+    justify-self: start;
+}
+.contenedor-tres div:nth-child(8){
+    align-self: start;
+    justify-self: center;
+}
+
+
+.contenedor-cuatro{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 400px;
+    padding: 20px;
+    /* una forma de poner las columnas que queremos sin tener que  estar poniendo las mimas medidas infinitamente es usando la funcion repeat en el template columns segudo de la cantidad que columnas uqe quieres y separado por una coma las medidas de esta*/
+    grid-template-columns: repeat(4, 50px);
+    background-color: aquamarine;
+}
+
+.contenedor-cuatro div{
+    border: 1px solid;
+    padding: 20px;
+    text-align: center;
+    background-color: aqua;
+}
+
+.contenedor-cuatro div:first-child{
+    /* al igual que en la fila lo podemos hacer con las lineas de las columnas */
+    grid-column: 1/ 4;
+    /* con esta propiedad podemos mordear el contenedor o la regilla de la grid dandole el primer valor desde que linea parte en la fila hasta cual termina */
+    grid-row: 1/ span 2;
+    /* con espan utilizamos en vez de terminar en la linea termina en el espacio indicado en el caso anterior termina en el espacio 4 */
+}
+
+/*
+ las dos propiedades anteriores son laa forma corta de grid-row-stard y grid-row-end al igual que grid-column-stard y grid-column-end 
+ */
+
+/*
+-----------------------------------------------------*/
+
+div p,div{
+    background-color: cornflowerblue;
+}
+
+.contenedor-ganador{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(4,100px);
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.contenedor-ganador div{
+    background-color: rgb(34, 83, 173);
+    border: 1px solid;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor-ganador div:nth-child(9){
+    padding-top: 90px;
+    grid-row: 2/4;
+    grid-column: 2/4;
+}
+
+.contenedor-cinco{
+    height: 100vh;
+    display: grid;
+    /* CON grid auto flow esitamos el flujo de la grilla es como el flex direction */
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(4,100px);
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(34, 83, 173);
+}
+
+.contenedor-cinco div{
+    background-color: cornflowerblue;
+    border: 1px solid;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor-cinco div:nth-child(9){
+    padding-top: 90px;
+    grid-row: 1/span 4;
+    grid-column: 2/span 5;
+}
+
+.contenedor-cinco div:nth-child(7){
+    padding-top: 90px;
+    grid-row: 1/span 2;
+    grid-column: 3/span 5;
+}
+
+.contenedor-cinco div:nth-child(4){
+    background-color: aqua;
+}
+
+.contenedor-seis1{
+    display: grid;
+    height: 250px;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 100px);
+    background-color: darkorchid;
+}
+.contenedor-seis2{
+    grid-template-rows: repeat(3, 100px);
+    display: grid;
+    height: 250px;
+    grid-template-columns: repeat(3, 50px);
+    background-color: darkorchid;
+}
+
+.contenedor-seis1 div{
+background-color: darkmagenta;
+border: 1px solid;
+}
+.contenedor-seis2 div{
+background-color: darkmagenta;
+border: 1px solid;
+}
+
+.contenedor-seis1{
+    /* con max-content se ajustara dependiendo de su contenido */
+    grid-template-columns: repeat(3, max-content);
+}
+
+.contenedor-seis2{
+    /* i con mid-content al poner un espacio se cortara */
+    grid-template-columns: repeat(3, min-content);
+}
+
+
+.contenedor-seis1{
+    /* una forma mas facil de darle estod dos estilos con con la plababra reservada "minmax" */
+    grid-template-columns: repeat(3, minmax(min-content,max-content));
+}
+
+.contenedor-seis2{
+    /* auto fill */
+    /* el auto fill es como el flex wrap de display flex */
+    grid-template-columns: repeat(auto-fill, minmax(50px,100px));
+}
+.contenedor-seis1{
+    /* auto fill */
+    /* el auto fill es como el flex wrap de display flex */
+    grid-template-columns: repeat(auto-fit, minmax(200px,100px));
+}
+
+
+
+.contenedor-siete{
+    background-color: gold;
+    height: 90vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    align-content: center;
+    justify-content: center;
+}
+
+.contenedor-siete div{
+    background-color: rgb(165, 143, 20);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid;
+}
+
+.contenedor-siete div:first-child{
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
+    /* grid-area es la forma corta de darle grid-row y grid-colum */
+    grid-area: 1/3/3/1;
+    /* los dos primeros valores es donde empieza en columna y fila y los otros dos donde termina en columna y fila */
+}
+
+
+
+.contenedor-ocho{
+    background-color: rgb(62, 52, 52);
+    height: 90vh;
+    display: grid;
+    
+    grid-template-areas:
+     'header header header' 
+     'menu main aside'
+      'footer footer footer';
+    
+}
+
+.contenedor-ocho div{
+    text-align: center;
+    background-color: rgb(28, 18, 18);
+    width: 100px;
+    height: 100px;
+}
+
+.contenedor-ocho div:first-child{
+    grid-area: header;
+}
+
+.contenedor-ocho div:nth-child(2){
+    grid-area: nav;
+}
+.contenedor-ocho div:nth-child(3){
+    grid-area: main;
+}
+.contenedor-ocho div:nth-child(4){
+    grid-area: aside;
+}
+.contenedor-ocho div:nth-child(5){
+    grid-area: footer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

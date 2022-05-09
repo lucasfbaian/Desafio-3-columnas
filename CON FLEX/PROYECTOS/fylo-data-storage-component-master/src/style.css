@@ -1,0 +1,261 @@
+:root{
+    --line-gradient: linear-gradient(hsl(6, 100%, 80%) to hsl(335, 100%, 65%));
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+.contenedor-bg{
+    height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    position: relative;
+}
+
+.bg-desktop{
+    bottom: 0px;
+    position: absolute;
+}
+
+.bg-mobile{
+    display: none;
+}
+
+.contenedor-main{
+    position: relative;
+    /* background-color: aquamarine; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    padding-bottom: 100px;
+}
+
+.contenedor-left{
+    background-color:var(--Dark-Blue);
+    border-radius: 10px 100px 10px 10px ;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenedor-logo{
+    padding-left: 40px;
+}
+
+.contenedor-logos{
+    display: flex;
+    padding-left: 30px;
+}
+
+
+.contenedor-logos div{
+    background-color: var(--Very-Dark-Blue);
+    width: 55px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.logos{
+    padding-left: 5px;
+    width: 50%;
+    height: 50%;
+}
+
+.contenedor-right{
+    background-color: var(--Dark-Blue);
+    margin-top: 50px;
+    margin-left: 30px;
+    height: 150px;
+    width: 470px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.contenedor-centrado{
+    position: relative;
+    height: 100px;
+    align-self: center;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.parrafo-derecho{
+    color: var(--Grayish-Blue);
+}
+
+.parrafo-derecho span{
+    color: var(--Pale-Blue);
+}
+
+.contenedor-contador{
+    margin: 15px 0px 0px 3px;
+}
+
+.primera-barra{
+    background-color: var(--Very-Dark-Blue);
+    width: 400px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+}
+
+.primera-barra div{
+    background: linear-gradient(90deg,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 300px;
+    height: 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 2px;
+}
+
+.segunda-barra div{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+}
+
+.porcentajes{
+    color: var(--Pale-Blue);
+    padding-top: 5px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pentaña{
+    position: absolute;
+    /* background-color: #fff; */
+    width: 0px;
+    height: 0px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid white;
+    border-bottom: 25px solid transparent;
+    top: 15px;
+    right: 0px;
+}
+
+.biñeta{
+    position: absolute;
+    width: 150px;
+    height: 65px;
+    background-color: #fff;
+    right: -25px;
+    top: -65px;
+    border-radius: 10px 10px 0px 10px;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.biñeta span {
+    padding-left: 5px;
+    font-size: 10px;
+    color: var(--Grayish-Blue);
+}
+
+@media (max-width: 870px){
+ .contenedor-main{
+     flex-direction: column;
+     padding: 0px 0px 250px 0px;
+ }   
+
+ .contenedor-right{
+     margin-top: 20px;
+     max-width: 350px;
+     margin-left: 0px;
+    }
+    
+    .pentaña{
+        border-right: transparent;
+ }
+
+ .biñeta{
+     border-bottom-right-radius: 10px;
+     top: 80px;
+     left: -230px;
+ }
+
+ .contenedor-centrado{
+     width: 300px;
+ }
+
+
+
+ .primera-barra{
+     background-color: var(--Very-Dark-Blue);
+     width: 300px;
+     height: 20px;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     padding-left: 3px;
+ }
+ 
+ .primera-barra div{
+     background: linear-gradient(90deg,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+     width: 200px;
+     height: 14px;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: end;
+     padding-right: 2px;
+ }
+ 
+ .segunda-barra div{
+     width: 12px;
+     height: 12px;
+     background: #fff;
+ }
+ 
+ .porcentajes{
+     color: var(--Pale-Blue);
+     padding-top: 5px;
+     width: 300px;
+     display: flex;
+     justify-content: space-between;
+ }
+}
+
+@media (max-width: 375px){
+    .bg-desktop{
+        display: none;
+    }
+    .bg-mobile{
+        position: absolute;
+        display: block;
+    }
+}
