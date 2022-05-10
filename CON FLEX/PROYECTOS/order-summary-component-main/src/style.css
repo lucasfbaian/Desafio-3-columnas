@@ -1,0 +1,121 @@
+:root{
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    position: relative;
+    background-color: var(--Pale-blue);
+}
+
+.bg{
+    position: absolute;
+}
+
+.contenedor-padre{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-targeta{
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cabecera img{
+    width: 100%;
+}
+
+.cuerpo{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.title-main{
+    font-weight: 900;
+    color: var(--Dark-blue);
+    margin-bottom: 5px;
+}
+
+.text-main{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+    max-width: 250px;
+}
+
+.info-buy{
+    display: flex;
+    background-color: var(--Very-pale-blue);
+    width: 300px;
+    height: 65px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon-main{
+    display: flex;
+    align-items: center;
+}
+
+.icon-music{
+    width: 100%;
+}
+
+.description{
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.description p:nth-child(1){
+    color: var(--Dark-blue);
+    font-weight: 700;
+}
+
+.description p:nth-child(2){
+    color: var(--Desaturated-blue);
+}
+
+.more-info{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.page{
+    background-color: var(--Bright-blue);
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--Very-pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cancelacion{
+    cursor: pointer;
+}
