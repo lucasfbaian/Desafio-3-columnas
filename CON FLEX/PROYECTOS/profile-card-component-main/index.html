@@ -3,33 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Profile card component</title>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="/CON FLEX/PROYECTOS/profile-card-component-main/src/style.css">
 </head>
 <body>
-  Victor Crest
-  26
-  London
+  <div class="contenedor-body">
+    <img src="/CON FLEX/PROYECTOS/profile-card-component-main/images/bg-pattern-top.svg" alt="bg-top" class="bgs bg-top">
+    <img src="/CON FLEX/PROYECTOS/profile-card-component-main/images/bg-pattern-bottom.svg" alt="bg-bottom" class="bgs bg-bottom">
+    <div class="contenedor-tag">
+      <div class="tag">
+        <header class="contenedor-cabecera">
+          <img src="/CON FLEX/PROYECTOS/profile-card-component-main/images/bg-pattern-card.svg" alt="pattern" class="pattern-card">
+          <img src="/CON FLEX/PROYECTOS/profile-card-component-main/images/image-victor.jpg" alt="victor" class="victor-card">
+        </header>
+        <main class="contenedor-cuerpo">
+          <p class="name-cuerpo">
+            Victor Crest
+            <span class="ague">
+              26
 
-  80K
-  Followers
+            </span>
+          </p>
+          <p class="pais">
+            London
 
-  803K
-  Likes
+          </p>
+        </main>
+        <footer class="contenedor-footer">
+          <div class="seguidores">
+            <p class="num-seguidores">
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+              80K
+            </p>
+            <span class="text-footer">
+              Followers
+              
+            </span>
+          </div>
+          <div class="megustas">
+            <p class="num-seguidores">
+  
+              803K
+            </p>
+            <span class="text-footer">
+              Likes
+  
+            </span>
+            
+          </div>
+          <div class="fotos">
+            <p class="num-seguidores">
+  
+              1.4K
+            </p>
+            <span class="text-footer">
+              Photos
+  
+            </span>
+
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
 </body>
 </html>
